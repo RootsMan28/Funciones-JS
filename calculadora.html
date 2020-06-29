@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container mt-5 " id="app">
+
+		<h3>{{title}}</h3>
+
+		<label>Primer Número</label>
+		<input type="text" class="form-control my-3 col-md-1" v-model="numeroFirst">
+
+		<label>Segundo Número</label>
+		<input type="text" class="form-control my-3 col-md-1" v-model="numeroSecond">
+
+		<label>Resultado</label>
+		<input type="text" class="form-control my-3 col-md-1" v-model="nuevoResultado">
+
+		<button class="btn btn-primary" @click="agregarResultado('suma')">Sumar</button>
+		<button class="btn btn-primary" @click="agregarResultado('resta')">Restar</button>
+		<button class="btn btn-primary" @click="agregarResultado('multiplicacion')">Multiplicar</button>
+		<button class="btn btn-primary" @click="agregarResultado('division')">Dividir</button>
+<br>
+		
+			<span class="form-control my-3">{{nota}}</span>
+
+		
+	</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="calculadora.js"></script>
+</body>
+</html>
